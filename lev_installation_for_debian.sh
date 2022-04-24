@@ -87,6 +87,8 @@ elif [ "$ubuntu_version" = "20.04" ] || [ "$ubuntu_version" = "18.04" ]; then
 	curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py | python3.10 -
 	echo "export PATH=/root/.local/bin:\$PATH" >> ~/.bashrc
 	source ~/.bashrc
-else
+fi
+
+if [ "debian_version" = "" ] && [ "ubuntu_version" = "" ]; then
 	echo "No compatible OS version found."
 fi
