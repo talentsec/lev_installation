@@ -5,7 +5,7 @@ if [ "$ubuntu_version" = "22.04" ]; then
 	curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py | python3 -
 	echo "export PATH=/root/.local/bin:\$PATH" >> ~/.bashrc
 	source ~/.bashrc
-elif [ "$ubuntu_version" = "20.04" ]; then
+elif [ "$ubuntu_version" = "20.04" ] || [ "$ubuntu_version" = "18.04" ]; then
 	# install python3.10
 	sudo apt update && sudo apt upgrade -y
 	sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
