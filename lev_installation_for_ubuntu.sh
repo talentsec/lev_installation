@@ -5,7 +5,7 @@ if [ "$ubuntu_version" = "22.04" ]; then
 	curl -sSL https://raw.githubusercontent.com/pdm-project/pdm/main/install-pdm.py | python3 -
 	echo "export PATH=/root/.local/bin:\$PATH" >> ~/.bashrc
 	source ~/.bashrc
-elif [ "$ubuntu_version" = "16.04" ]; then
+elif [ "$ubuntu_version" = "12.04" ] || [ "$ubuntu_version" = "14.04" ] || [ "$ubuntu_version" = "16.04" ]; then
 	# install openssl 1.1.1n
 	apt-get update && apt-get upgrade -y
 	apt-get install build-essential checkinstall zlib1g-dev wget -y
