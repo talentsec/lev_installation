@@ -11,7 +11,7 @@ elif [ "$os_type" = "Ubuntu" ]; then
     ubuntu_version=$(lsb_release -r -s)
 fi
 
-if [ "$debian_version" = "9" ]; then
+if [[ "$debian_version" =~ 9\.* ]]; then
     apt update && apt upgrade -y
     # install openssl-1.1.1n
 	apt install build-essential checkinstall zlib1g-dev wget -y
