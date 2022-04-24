@@ -11,7 +11,7 @@ elif [ "$os_type" = "Ubuntu" ]; then
     ubuntu_version=$(lsb_release -r -s)
 fi
 
-if [ "$debian_version" = "11" ]; then
+if [ "$debian_version" = "10" ] || [ "$debian_version" = "11" ]; then
     apt update && apt upgrade -y
     # install python-3.10.4
     apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev -y
